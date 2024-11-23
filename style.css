@@ -52,7 +52,7 @@ nav ul li a:hover::after {
 .header-text h1 {
     font-size:60px;
     margin-top: 20px;
-    padding-top: 100px;
+    padding-top: 80px;
     text-align: center;
 }
 
@@ -215,7 +215,7 @@ nav .fas{
     display: block;
     padding-bottom: 80px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
    
     .header-text {
         font-size: 30px;
