@@ -84,7 +84,10 @@ nav ul li a:hover::after {
 .ab-me-col2{
     flex-basis: 60%;
 }
-
+.ab-me-col2 p {
+    font-size: 30px;
+    font-weight: 300;
+}
 .ab-me-col1 img{
     border-radius:50x;
     width: 100%;
