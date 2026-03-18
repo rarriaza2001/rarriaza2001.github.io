@@ -109,14 +109,14 @@ export default function App() {
                 <h2 className="section-title">About Me</h2>
                 <p>
                 I&apos;m a backend software engineer focused on building distributed systems, real-time applications, and AI-powered platforms.
-                <br/>
+                <br/> <br/>
                 I graduated from The University of Texas at Austin (B.S. Computer Science and minors in Business and Applied Economics). <br/>
                 Currently a developer for DraawApp Technologies.
-                <br/>
+                <br/> <br/>
                 I&apos;ve designed systems each built with a strong emphasis on performance, reliability, and real-world constraints.
-                <br/>
+                <br/> <br/>
                 I’m most interested in solving problems where system design, scalability, and correctness matter. 
-                <br/>
+                <br/> <br/>
                 Reach out below — I&apos;ll get back to you as soon as I can.</p>
               </div>
             </div>
