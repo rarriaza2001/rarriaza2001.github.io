@@ -17,7 +17,7 @@ const navItems: CardNavItem[] = [
     bgColor: 'rgba(232, 240, 254, 0.95)',
     textColor: '#0e4c92',
     links: [
-      { label: 'My story', href: '#about', ariaLabel: 'Go to About' },
+      { label: 'About Me', href: '#about', ariaLabel: 'Go to About' },
       { label: 'Skills', href: '#skills', ariaLabel: 'Go to Skills' }
     ]
   },
@@ -135,13 +135,11 @@ export default function App() {
                   'Software Engineering',
                   'Backend Development',
                   'Frontend Development',
-                  'SQL',
                   'API Development',
                   'Network Architecture',
-                  'Python',
                   'JavaScript / TypeScript',
-                  'Redis',
                   'Docker/Kubernetes',
+                  'Redis',
                 ].map((s) => (
                   <span key={s} className="skill-pill">
                     {s}
@@ -153,7 +151,7 @@ export default function App() {
         </section>
 
         <section id="portfolio" className="section">
-          <div className="container">
+          <div className="container glass-panel">
             <h2 className="section-title">My Work</h2>
 
             <div className="portfolio-folders">
