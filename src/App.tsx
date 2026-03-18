@@ -85,7 +85,7 @@ export default function App() {
       <div className="app-main">
         <section id="top" className="hero">
           <div className="hero-headshot-wrap">
-            <img className="hero-headshot" src="/file.jpg" alt="Jose Arriaza" width={200} height={200} />
+            <img className="hero-headshot" src="/file.png" alt="Jose Arriaza" width={200} height={200} />
           </div>
           <h1>Hello, I&apos;m Jose Arriaza</h1>
           <p className="hero-tagline">
