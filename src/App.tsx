@@ -87,7 +87,7 @@ export default function App() {
           </div>
           <h1>Hello, I&apos;m Jose Arriaza</h1>
           <p className="hero-tagline">
-            Computer Science <br /> UT Austin Class of 2025 <br /> Software Engineering
+            Software Engineering <br /> UT Austin Class of 2025
           </p>
           <div className="hero-cta">
             <a className="btn-liquid" href="#portfolio">
