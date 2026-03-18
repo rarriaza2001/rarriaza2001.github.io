@@ -3,10 +3,8 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import CardNav, { type CardNavItem } from './components/CardNav/CardNav';
 import { LogoLoop } from './components/LogoLoop/LogoLoop';
 import Threads from './components/Threads/Threads';
-import Folder from './components/Folder/Folder';
-import { projectFolderItems } from './components/ProjectFolderPapers';
+import PortfolioCircularGallery from './components/PortfolioCircularGallery';
 import { logoLoopItems } from './data/logoLoopItems';
-import { portfolioProjects } from './data/portfolioProjects';
 
 const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwQdZ-TsPHF4DSF3vKOaC44qOGV2vVocR7M5pqEtQA-_a5H21h2SaLUx4wN6tAo2eBLTA/exec';
@@ -89,7 +87,7 @@ export default function App() {
           </div>
           <h1>Hello, I&apos;m Jose Arriaza</h1>
           <p className="hero-tagline">
-            B.S. Computer Science @ UT Austin <br /> Software Engineering
+            Computer Science <br /> UT Austin Class of 2025 <br /> Software Engineering
           </p>
           <div className="hero-cta">
             <a className="btn-liquid btn-liquid--solid" href="#portfolio">
@@ -123,6 +121,15 @@ export default function App() {
           </div>
         </section>
 
+        <section id="portfolio" className="section">
+          <div className="container">
+            <div className="glass-panel">
+              <h2 className="section-title">My Work</h2>
+              <PortfolioCircularGallery />
+            </div>
+          </div>
+        </section>
+
         <section id="skills" className="section">
           <div className="container">
             <div className="glass-panel">
@@ -146,21 +153,6 @@ export default function App() {
                   </span>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="portfolio" className="section">
-          <div className="container glass-panel">
-            <h2 className="section-title">My Work</h2>
-
-            <div className="portfolio-folders">
-              {portfolioProjects.map((project) => (
-                <div key={project.title} className="folder-project">
-                  <Folder color={project.folderColor} size={1} items={projectFolderItems(project)} />
-                  <h3>{project.title}</h3>
-                </div>
-              ))}
             </div>
           </div>
         </section>

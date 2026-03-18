@@ -5,7 +5,7 @@ export type PortfolioProject = {
   previewAlt: string;
   liveUrl: string | null;
   repoUrl: string | null;
-  blurb: string;
+  description: string;
 };
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -16,7 +16,7 @@ export const portfolioProjects: PortfolioProject[] = [
     previewAlt: 'JoinMe app preview',
     liveUrl: null,
     repoUrl: 'https://github.com/rarriaza2001/JoinMeApp',
-    blurb: 'Connect with friends nearby — create or join plans.'
+    description: 'Connect with friends nearby, create plans, and quickly see who is free to join.'
   },
   {
     title: 'ParkPortal',
@@ -25,7 +25,7 @@ export const portfolioProjects: PortfolioProject[] = [
     previewAlt: 'ParkPortal web app',
     liveUrl: null,
     repoUrl: 'https://gitlab.com/RArriaza2001/cs373-idb/-/tree/main',
-    blurb: 'Find theme parks by characters, locations, and rides.'
+    description: 'Explore theme parks by characters, locations, and rides to plan your next trip.'
   },
   {
     title: 'Jamming',
@@ -34,6 +34,6 @@ export const portfolioProjects: PortfolioProject[] = [
     previewAlt: 'Jamming project',
     liveUrl: null,
     repoUrl: null,
-    blurb: "Spotify playlists from a Twitter account's hashtags."
+    description: 'Generate Spotify playlists from the hashtags used by a given Twitter account.'
   }
 ];

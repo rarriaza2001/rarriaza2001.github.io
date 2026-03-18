@@ -103,7 +103,6 @@
   overflow: hidden;
 }
 
-/* Hide paper contents when closed (content was overflowing past the folder flap) */
 .folder:not(.open):not(:hover) .paper {
   opacity: 0;
   visibility: hidden;
