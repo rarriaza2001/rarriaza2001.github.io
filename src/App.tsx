@@ -90,7 +90,7 @@ export default function App() {
             Computer Science <br /> UT Austin Class of 2025 <br /> Software Engineering
           </p>
           <div className="hero-cta">
-            <a className="btn-liquid btn-liquid--solid" href="#portfolio">
+            <a className="btn-liquid" href="#portfolio">
               View my work
             </a>
             <a className="btn-liquid" href="#contact">
