@@ -14,9 +14,6 @@ function repoLabel(repoUrl: string): string {
   return 'GitHub';
 }
 
-/**
- * Three “papers” for the Folder component: live preview link, repo link, blurb.
- */
 export function projectFolderItems(project: PortfolioProject): ReactNode[] {
   const { previewSrc, previewAlt, liveUrl, repoUrl, blurb } = project;
 
@@ -37,7 +34,7 @@ export function projectFolderItems(project: PortfolioProject): ReactNode[] {
       ) : (
         <div className="folder-paper-thumb-wrap">
           <img className="folder-paper-img folder-paper-img--muted" src={previewSrc} alt="" aria-hidden />
-          <span className="folder-paper-placeholder">Add liveUrl in portfolioProjects.ts</span>
+          <span className="folder-paper-placeholder">Live demo</span>
         </div>
       )}
     </div>
@@ -61,7 +58,7 @@ export function projectFolderItems(project: PortfolioProject): ReactNode[] {
       ) : (
         <div className="folder-repo-tile folder-repo-tile--placeholder">
           <img className="folder-repo-brand-icon folder-repo-brand-icon--muted" src={GITHUB_ICON} alt="" />
-          <span className="folder-paper-placeholder">Add repoUrl in portfolioProjects.ts</span>
+          <span className="folder-paper-placeholder">Repository</span>
         </div>
       )}
     </div>

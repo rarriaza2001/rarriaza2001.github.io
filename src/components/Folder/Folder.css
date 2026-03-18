@@ -95,7 +95,26 @@
   height: 80%;
   background: var(--paper-1);
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    height 0.3s ease-in-out,
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  overflow: hidden;
+}
+
+/* Hide paper contents when closed (content was overflowing past the folder flap) */
+.folder:not(.open):not(:hover) .paper {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.folder.open .paper,
+.folder:hover .paper {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .paper:nth-child(2) {

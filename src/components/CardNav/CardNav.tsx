@@ -27,7 +27,6 @@ export interface CardNavProps {
   menuColor?: string;
   buttonBgColor?: string;
   buttonTextColor?: string;
-  /** If set, CTA renders as a link (e.g. resume PDF) instead of a static button */
   ctaHref?: string;
   ctaLabel?: string;
 }

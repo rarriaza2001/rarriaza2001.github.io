@@ -155,10 +155,7 @@ export default function App() {
         <section id="portfolio" className="section">
           <div className="container">
             <h2 className="section-title">My Work</h2>
-            <p style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>
-              Open each folder — live demo and repo links (placeholders until you set URLs in{' '}
-              <code>portfolioProjects.ts</code>).
-            </p>
+            <p style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>Click a folder to open.</p>
             <div className="portfolio-folders">
               {portfolioProjects.map((project) => (
                 <div key={project.title} className="folder-project">

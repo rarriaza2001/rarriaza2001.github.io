@@ -1,15 +1,9 @@
-/**
- * Portfolio folder content. Set liveUrl and/or repoUrl when you have links;
- * leave null to show placeholders inside the folder.
- */
 export type PortfolioProject = {
   title: string;
   folderColor: string;
   previewSrc: string;
   previewAlt: string;
-  /** Deployed app / live demo — null until you add the URL */
   liveUrl: string | null;
-  /** GitHub, GitLab, etc. — null until you add the URL */
   repoUrl: string | null;
   blurb: string;
 };

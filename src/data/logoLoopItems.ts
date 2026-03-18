@@ -1,10 +1,5 @@
 import type { LogoItem } from '../components/LogoLoop/LogoLoop';
 
-/**
- * Add more entries to rotate in the logo strip (tech stack, employers, tools).
- * Use Simple Icons CDN: https://simpleicons.org/ — pattern:
- *   https://cdn.simpleicons.org/{icon-slug}/{hex-color}
- */
 export const logoLoopItems: LogoItem[] = [
   { src: 'https://cdn.simpleicons.org/python/3776AB', alt: 'Python' },
   { src: 'https://cdn.simpleicons.org/typescript/3178C6', alt: 'TypeScript' },

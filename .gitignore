@@ -1,4 +1,3 @@
-STYLE_GUIDE.md
 node_modules
 dist
 .env
@@ -7,8 +6,3 @@ dist
 .env.test.local
 .env.production.local
 .DS_Store
-.gitignore
-.npmrc
-.npmignore
-.npmrc
-.npmignore
