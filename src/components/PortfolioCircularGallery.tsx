@@ -51,7 +51,10 @@ export default function PortfolioCircularGallery({ itemWidthRem = 8 }: Portfolio
     }
   };
 
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.pointerType !== 'mouse') {
+      return;
+    }
     const container = containerRef.current;
     if (!container) return;
     setIsPointerDown(true);
@@ -67,15 +70,24 @@ export default function PortfolioCircularGallery({ itemWidthRem = 8 }: Portfolio
     setIsPointerDown(false);
   };
 
-  const handleMouseLeave = () => {
+  const handlePointerLeave = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.pointerType !== 'mouse') {
+      return;
+    }
     endDrag();
   };
 
-  const handleMouseUp = () => {
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.pointerType !== 'mouse') {
+      return;
+    }
     endDrag();
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.pointerType !== 'mouse') {
+      return;
+    }
     if (!isPointerDown) return;
     const container = containerRef.current;
     if (!container) return;
@@ -98,10 +110,10 @@ export default function PortfolioCircularGallery({ itemWidthRem = 8 }: Portfolio
       <div
         className="portfolio-strip-gallery"
         ref={containerRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
+        onPointerDown={handlePointerDown}
+        onPointerLeave={handlePointerLeave}
+        onPointerUp={handlePointerUp}
+        onPointerMove={handlePointerMove}
       >
         <div className="portfolio-strip-track">
           <div className="portfolio-strip-spacer" aria-hidden="true" />
