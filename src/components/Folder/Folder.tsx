@@ -27,11 +27,8 @@ const darkenColor = (hex: string, percent: number): string => {
 };
 
 const Folder: React.FC<FolderProps> = ({ color = '#5227FF', size = 1, items = [], className = '' }) => {
-  const maxItems = 3;
+  const maxItems = 2;
   const papers = items.slice(0, maxItems);
-  while (papers.length < maxItems) {
-    papers.push(null);
-  }
 
   const [open, setOpen] = useState(false);
   const [paperOffsets, setPaperOffsets] = useState<{ x: number; y: number }[]>(
@@ -40,7 +37,6 @@ const Folder: React.FC<FolderProps> = ({ color = '#5227FF', size = 1, items = []
 
   const folderBackColor = darkenColor(color, 0.08);
   const paper1 = darkenColor('#ffffff', 0.1);
-  const paper2 = darkenColor('#ffffff', 0.05);
   const paper3 = '#ffffff';
 
   const handleClick = () => {
@@ -76,7 +72,6 @@ const Folder: React.FC<FolderProps> = ({ color = '#5227FF', size = 1, items = []
     '--folder-color': color,
     '--folder-back-color': folderBackColor,
     '--paper-1': paper1,
-    '--paper-2': paper2,
     '--paper-3': paper3
   } as React.CSSProperties;
 

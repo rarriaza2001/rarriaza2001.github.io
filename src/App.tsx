@@ -85,11 +85,11 @@ export default function App() {
       <div className="app-main">
         <section id="top" className="hero">
           <div className="hero-headshot-wrap">
-            <img className="hero-headshot" src="/file.png" alt="Jose Arriaza" width={200} height={200} />
+            <img className="hero-headshot" src="/website-headshot.png" alt="Jose Arriaza" width={200} height={200} />
           </div>
           <h1>Hello, I&apos;m Jose Arriaza</h1>
           <p className="hero-tagline">
-            B.S. Computer Science @ UT Austin · Machine Learning · Full-Stack Development
+            B.S. Computer Science @ UT Austin <br /> Software Engineering
           </p>
           <div className="hero-cta">
             <a className="btn-liquid btn-liquid--solid" href="#portfolio">
@@ -155,7 +155,7 @@ export default function App() {
         <section id="portfolio" className="section">
           <div className="container">
             <h2 className="section-title">My Work</h2>
-            <p style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>Click a folder to open.</p>
+
             <div className="portfolio-folders">
               {portfolioProjects.map((project) => (
                 <div key={project.title} className="folder-project">

@@ -154,8 +154,8 @@ body {
 }
 
 .hero-headshot {
-  width: clamp(160px, 32vw, 260px);
-  height: clamp(160px, 32vw, 260px);
+  width: clamp(300px, 32vw, 400px);
+  height: clamp(300px, 32vw, 400px);
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.65);
@@ -169,7 +169,7 @@ body {
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.03em;
-  max-width: 16ch;
+  max-width: 18ch;
   margin: 0 auto 1rem;
   animation: heroIn 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
@@ -255,7 +255,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.5rem, 4vw, 2.5rem);
-  margin-top: 2.5rem;
+  margin-top: 5rem;
   justify-items: center;
 }
 
