@@ -111,6 +111,7 @@ export default function App() {
                 I&apos;m a backend software engineer focused on building distributed systems, real-time applications, and AI-powered platforms.
                 <br/> <br/>
                 I graduated from The University of Texas at Austin (B.S. Computer Science and minors in Business and Applied Economics). <br/>
+                <br/><br/>
                 Currently a developer for DraawApp Technologies.
                 <br/> <br/>
                 I&apos;ve designed systems each built with a strong emphasis on performance, reliability, and real-world constraints.
