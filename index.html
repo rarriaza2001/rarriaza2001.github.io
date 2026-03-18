@@ -1,132 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
-    <meta name="viewport" content="width-device-width. initial-scale-1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jose Ricardo Arriaza — Computer Science @ UT Austin. Portfolio: ML, full-stack, software engineering." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/6e055f0ba1.js" crossorigin="anonymous"></script>
-    <title>Jose Arriaza Portfolio</title>
+    <title>Jose Arriaza — Portfolio</title>
 </head>
 <body>
-    <div id="header">
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+    <header id="header">
         <div class="container">
-            <nav>
-                <ul id="sidemenu">
-                    <li> <a href="#about">About Me </a></li>
-                    <li> <a href="#portfolio">Portfolio</a></li>
-                    <li> <a href="Jose_Arriaza_resume.pdf" download >Resume</a></li>
-                    <li> <a href="#contact">Contact</a></li>
-                    <i class="fas fa-regular fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class=" fas fa-solid fa-bars" onclick="openmenu()"></i>
+            <nav aria-label="Main navigation">
+                <div class="nav-inner">
+                    <a href="#header" class="nav-brand">Jose Arriaza</a>
+                    <ul id="sidemenu">
+                        <li class="menu-close-wrap">
+                            <button type="button" class="menu-close" onclick="closemenu()" aria-label="Close menu">
+                                <i class="fas fa-times" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="Jose_Arriaza_resume.pdf" download>Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button type="button" class="nav-toggle" onclick="openmenu()" aria-label="Open menu" aria-expanded="false" id="nav-toggle">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
             </nav>
             <div class="header-text">
+                <!-- Edit tagline below (see STYLE_GUIDE.md) -->
                 <h1>Hello, I'm Jose Arriaza</h1>
-                <br>
-                <br>
+                <p class="hero-tagline">B.S. Computer Science @ UT Austin · Machine Learning · Full-Stack Development</p>
+                <div class="hero-cta">
+                    <a class="btn-primary" href="#portfolio">View my work</a>
+                    <a class="btn-ghost" href="#contact">Get in touch</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="about">
+    </header>
+
+    <main>
+        <section id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="ab-me-col1">
+                        <div class="about-photo-wrap">
+                            <img src="sivar.png" alt="Jose Ricardo Arriaza" width="400" height="400" loading="lazy" />
+                        </div>
+                    </div>
+                    <div class="ab-me-col2">
+                        <h2 id="about-heading" class="subtitle">About Me</h2>
+                        <p>
+                            Hello, my name is Jose Ricardo Arriaza. I am 23 years old and I was born and raised in El Salvador, and about to graduate from the prestigious
+                            University of Texas at Austin with a Bachelor of Science in Computer Science, as well as a minor in Business and one
+                            in Applied Economics.
+                        </p>
+                        <p>
+                            My interests are Machine Learning, Full-Stack Development, and Software Engineering. When I am not working
+                            I enjoy going to the movies and watching sports like football or basketball.
+                        </p>
+                        <p>
+                            If you have any questions, feel free to contact me using the form below — I will get back to you as soon as possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Replace skill pills with your own (see STYLE_GUIDE.md) -->
+        <section id="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <h2 id="skills-heading" class="subtitle">Skills &amp; Focus</h2>
+                <p class="section-intro">Areas I work in — customize this list to match your experience.</p>
+                <div class="skills-grid">
+                    <span class="skill-pill">Machine Learning</span>
+                    <span class="skill-pill">Full-Stack Development</span>
+                    <span class="skill-pill">Software Engineering</span>
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">JavaScript / Web</span>
+                    <span class="skill-pill">Your skill here</span>
+                </div>
+                <p class="skills-placeholder-note">Edit the pills above in <code>index.html</code> to reflect your real stack and strengths.</p>
+            </div>
+        </section>
+
+        <section id="portfolio" aria-labelledby="portfolio-heading">
+            <div class="container">
+                <h2 id="portfolio-heading" class="subtitle">My Work</h2>
+                <p class="section-intro">Selected projects — hover or tap for details.</p>
+                <div class="work-list">
+                    <article class="work">
+                        <a class="work-card" href="https://github.com/rarriaza2001/JoinMeApp" target="_blank" rel="noopener noreferrer">
+                            <div class="work-img-wrap">
+                                <img src="iphone.jpeg" alt="JoinMe app preview" loading="lazy" />
+                            </div>
+                            <div class="layer">
+                                <h3>JoinMe App</h3>
+                                <p>Connects you to friends in the same area — create plans or join theirs.</p>
+                                <span class="layer-hint">View on GitHub →</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="work">
+                        <a class="work-card" href="https://gitlab.com/RArriaza2001/cs373-idb/-/tree/main" target="_blank" rel="noopener noreferrer">
+                            <div class="work-img-wrap">
+                                <img src="laptop.jpg" alt="ParkPortal web app" loading="lazy" />
+                            </div>
+                            <div class="layer">
+                                <h3>ParkPortal</h3>
+                                <p>Find theme parks by characters, locations, and number of rides.</p>
+                                <span class="layer-hint">View project →</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="work">
+                        <!-- Add your Jamming repo or demo URL when ready -->
+                        <a class="work-card" href="#portfolio" aria-label="Jamming project details">
+                            <div class="work-img-wrap">
+                                <img src="computer.webp" alt="Jamming project" loading="lazy" />
+                            </div>
+                            <div class="layer">
+                                <h3>Jamming</h3>
+                                <p>Spotify playlists from hashtags used by a Twitter account.</p>
+                                <span class="layer-hint">Link coming soon</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h2 id="contact-heading" class="subtitle">Contact Me</h2>
+                        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:jose.ricardo.arriazac@gmail.com">jose.ricardo.arriazac@gmail.com</a></p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/jose-ricardo-arriaza-1a3516262/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/rarriaza2001" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your name" required autocomplete="name" />
+                            <input type="email" name="Email" placeholder="Your email" required autocomplete="email" />
+                            <textarea name="Message" rows="6" placeholder="Your message" required></textarea>
+                            <button type="submit" class="btn">Send message</button>
+                        </form>
+                        <span id="msg" role="status" aria-live="polite"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="row">
-                <div class="ab-me-col1">
-                    <img src="sivar.png">
-                </div>
-                <div class="ab-me-col2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p> Hello, my name is Jose Ricardo Arriaza. I am 23 years old and I was born and raised in El Salvador, and about to graduate from the prestigious
-                        University of Texas at Austin with a Bachelor of Science in Computer Science, as well as a minor in Business and one
-                        in Applied Economics. <br><br>My interests are Machine Learning, Full-Stack Development, and Sofware Engineering, when I am not working
-                        I enjoy going to the movies, and watching sports like football or basketball. <br><br> If you have any questions, feel free to contact me in the form below,
-                        and I will get to you as soon as possible.
-                    </p>
-                    <div class="tabtitle">
-                        <p class="tablink"></p>
-                    </div>
-                </div>
-            </div>
+            <p>&copy; <span id="year"></span> Jose Ricardo Arriaza. Built for <a href="https://pages.github.com/">GitHub Pages</a>.</p>
         </div>
-    </div>
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="subtitle">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <a href="https://github.com/rarriaza2001/JoinMeApp"><img src = "iphone.jpeg"> </a>
-                    <div class="layer">
-                        <h3>JoinMe App</h3>
-                        <p> The app connects you to your friends in the same area, 
-                            and lets you create plans or join their plans </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <a href="https://gitlab.com/RArriaza2001/cs373-idb/-/tree/main"><img src = "laptop.jpg"> </a>
-                    <div class="layer">
-                    <h3>ParkPortal</h3>
-                        <p> Web application that allows users to find theme parks based on different characters, locations, and number of rides available.  </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <a><img src = "computer.webp"> </a>
-                    <div class="layer">
-                    <h3>Jamming</h3>
-                        <p> Created a Spotify playlist from the hashtags used by a given twitter account </p>
-                    </div>    
-                </div>   
-            </div>
-        </div>
-    </div>
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i>jose.ricardo.arriazac@gmail.com</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/jose-ricardo-arriaza-1a3516262/"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="Text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwQdZ-TsPHF4DSF3vKOaC44qOGV2vVocR7M5pqEtQA-_a5H21h2SaLUx4wN6tAo2eBLTA/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent succesfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    </footer>
+
+    <script>
+        (function () {
+            var sidemenu = document.getElementById("sidemenu");
+            var backdrop = document.getElementById("nav-backdrop");
+            var toggle = document.getElementById("nav-toggle");
+
+            function openmenu() {
+                sidemenu.classList.add("is-open");
+                backdrop.classList.add("is-open");
+                document.body.classList.add("menu-open");
+                if (toggle) toggle.setAttribute("aria-expanded", "true");
+            }
+
+            function closemenu() {
+                sidemenu.classList.remove("is-open");
+                backdrop.classList.remove("is-open");
+                document.body.classList.remove("menu-open");
+                if (toggle) toggle.setAttribute("aria-expanded", "false");
+            }
+
+            window.openmenu = openmenu;
+            window.closemenu = closemenu;
+
+            if (backdrop) {
+                backdrop.addEventListener("click", closemenu);
+            }
+
+            sidemenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+                link.addEventListener("click", function () {
+                    closemenu();
+                });
+            });
+            sidemenu.querySelectorAll('a[download], a[href$=".pdf"]').forEach(function (link) {
+                link.addEventListener("click", function () {
+                    closemenu();
+                });
+            });
+
+            var aboutWrap = document.querySelector(".about-photo-wrap");
+            if (aboutWrap && "IntersectionObserver" in window) {
+                var io = new IntersectionObserver(
+                    function (entries) {
+                        entries.forEach(function (e) {
+                            if (e.isIntersecting) {
+                                e.target.classList.add("is-visible");
+                                io.unobserve(e.target);
+                            }
+                        });
+                    },
+                    { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+                );
+                io.observe(aboutWrap);
+            } else if (aboutWrap) {
+                aboutWrap.classList.add("is-visible");
+            }
+
+            document.getElementById("year").textContent = new Date().getFullYear();
+        })();
+    </script>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwQdZ-TsPHF4DSF3vKOaC44qOGV2vVocR7M5pqEtQA-_a5H21h2SaLUx4wN6tAo2eBLTA/exec";
+        const form = document.forms["submit-to-google-sheet"];
+        const msg = document.getElementById("msg");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then(function () {
+                    msg.textContent = "Message sent successfully.";
+                    setTimeout(function () {
+                        msg.textContent = "";
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(function (err) {
+                    console.error("Error!", err);
+                    msg.textContent = "Something went wrong. Please try email instead.";
+                });
+        });
+    </script>
 </body>
 </html>
-
-
