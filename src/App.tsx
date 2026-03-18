@@ -103,7 +103,7 @@ export default function App() {
           <div className="container">
             <div className="glass-panel about-grid">
               <div className="about-photo">
-                <img src="/sivar.png" alt="Jose Ricardo Arriaza" width={400} height={400} />
+                <img src="/about.png" alt="Jose Ricardo Arriaza" width={600} height={600} />
               </div>
               <div>
                 <h2 className="section-title">About Me</h2>
@@ -174,10 +174,10 @@ export default function App() {
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
                   >
-                    <FaLinkedin />
+                    <FaLinkedin style={{height: '40px', width: '40px'}}/>
                   </a>
                   <a href="https://github.com/rarriaza2001" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <FaGithub />
+                    <FaGithub style={{height: '40px', width: '40px'}}/>
                   </a>
                 </div>
               </div>
@@ -215,8 +215,7 @@ export default function App() {
 
         <footer className="site-footer">
           <p>
-            &copy; {new Date().getFullYear()} Jose Ricardo Arriaza ·{' '}
-            <a href="https://pages.github.com/">GitHub Pages</a>
+            &copy; {new Date().getFullYear()} Jose Ricardo Arriaza
           </p>
         </footer>
       </div>
