@@ -4,7 +4,9 @@ import CardNav, { type CardNavItem } from './components/CardNav/CardNav';
 import { LogoLoop } from './components/LogoLoop/LogoLoop';
 import Threads from './components/Threads/Threads';
 import Folder from './components/Folder/Folder';
+import { projectFolderItems } from './components/ProjectFolderPapers';
 import { logoLoopItems } from './data/logoLoopItems';
+import { portfolioProjects } from './data/portfolioProjects';
 
 const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwQdZ-TsPHF4DSF3vKOaC44qOGV2vVocR7M5pqEtQA-_a5H21h2SaLUx4wN6tAo2eBLTA/exec';
@@ -82,6 +84,9 @@ export default function App() {
 
       <div className="app-main">
         <section id="top" className="hero">
+          <div className="hero-headshot-wrap">
+            <img className="hero-headshot" src="/file.png" alt="Jose Arriaza" width={200} height={200} />
+          </div>
           <h1>Hello, I&apos;m Jose Arriaza</h1>
           <p className="hero-tagline">
             B.S. Computer Science @ UT Austin · Machine Learning · Full-Stack Development
@@ -122,17 +127,21 @@ export default function App() {
           <div className="container">
             <div className="glass-panel">
               <h2 className="section-title">Skills &amp; Focus</h2>
-              <p style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>
-                Customize these tags in <code>App.tsx</code> to match your experience.
-              </p>
+
               <div className="skills-grid">
                 {[
                   'Machine Learning',
                   'Full-Stack Development',
                   'Software Engineering',
+                  'Backend Development',
+                  'Frontend Development',
+                  'SQL',
+                  'API Development',
+                  'Network Architecture',
                   'Python',
                   'JavaScript / TypeScript',
-                  'Your skill here'
+                  'Redis',
+                  'Docker/Kubernetes',
                 ].map((s) => (
                   <span key={s} className="skill-pill">
                     {s}
@@ -147,69 +156,16 @@ export default function App() {
           <div className="container">
             <h2 className="section-title">My Work</h2>
             <p style={{ color: 'var(--muted)', marginTop: '0.5rem' }}>
-              Open each folder to explore — click the folder tab to toggle.
+              Open each folder — live demo and repo links (placeholders until you set URLs in{' '}
+              <code>portfolioProjects.ts</code>).
             </p>
             <div className="portfolio-folders">
-              <div className="folder-project">
-                <Folder
-                  color="#0e4c92"
-                  size={1}
-                  items={[
-                    <img key="1" className="folder-paper-img" src="/iphone.jpeg" alt="" />,
-                    <p key="2" className="folder-paper-text">
-                      Connect with friends nearby — create or join plans.
-                    </p>,
-                    <a
-                      key="3"
-                      className="folder-paper-link"
-                      href="https://github.com/rarriaza2001/JoinMeApp"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub →
-                    </a>
-                  ]}
-                />
-                <h3>JoinMe App</h3>
-              </div>
-              <div className="folder-project">
-                <Folder
-                  color="#2d6a8f"
-                  size={1}
-                  items={[
-                    <img key="1" className="folder-paper-img" src="/laptop.jpg" alt="" />,
-                    <p key="2" className="folder-paper-text">
-                      Theme park discovery by characters, locations, and rides.
-                    </p>,
-                    <a
-                      key="3"
-                      className="folder-paper-link"
-                      href="https://gitlab.com/RArriaza2001/cs373-idb/-/tree/main"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View project →
-                    </a>
-                  ]}
-                />
-                <h3>ParkPortal</h3>
-              </div>
-              <div className="folder-project">
-                <Folder
-                  color="#1e4976"
-                  size={1}
-                  items={[
-                    <img key="1" className="folder-paper-img" src="/computer.webp" alt="" />,
-                    <p key="2" className="folder-paper-text">
-                      Spotify playlists from a Twitter account&apos;s hashtags.
-                    </p>,
-                    <span key="3" className="folder-paper-text">
-                      Link coming soon
-                    </span>
-                  ]}
-                />
-                <h3>Jamming</h3>
-              </div>
+              {portfolioProjects.map((project) => (
+                <div key={project.title} className="folder-project">
+                  <Folder color={project.folderColor} size={1} items={projectFolderItems(project)} />
+                  <h3>{project.title}</h3>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -256,9 +212,6 @@ export default function App() {
         <div className="logo-loop-section">
           <div className="container">
             <h2>Tools &amp; technologies</h2>
-            <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
-              Add more logos in <code>src/data/logoLoopItems.ts</code>
-            </p>
             <LogoLoop
               logos={logoLoopItems}
               speed={80}
