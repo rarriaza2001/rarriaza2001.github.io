@@ -72,10 +72,10 @@ export default function App() {
         logo="/sivar.png"
         logoAlt="Jose Arriaza"
         items={navItems}
-        baseColor="rgba(255,255,255,0.55)"
+        baseColor="rgba(255, 255, 255, 0.55)"
         menuColor="#1a2744"
-        buttonBgColor="rgba(14, 76, 146, 0.9)"
-        buttonTextColor="#fff"
+        buttonBgColor="rgba(255, 255, 255, 0.35)"
+        buttonTextColor="var(--primary)"
         ctaHref="/Jose_Arriaza_resume.pdf"
         ctaLabel="Resume"
       />
@@ -108,14 +108,16 @@ export default function App() {
               <div>
                 <h2 className="section-title">About Me</h2>
                 <p>
-                  Hello, my name is Jose Ricardo Arriaza. I was born and raised in El Salvador, and I am completing my
-                  B.S. in Computer Science at UT Austin with minors in Business and Applied Economics.
-                </p>
-                <p>
-                  My interests include Machine Learning, Full-Stack Development, and Software Engineering. Outside of
-                  work I enjoy movies and sports like football and basketball.
-                </p>
-                <p>Reach out below — I&apos;ll get back to you as soon as I can.</p>
+                I&apos;m a backend software engineer focused on building distributed systems, real-time applications, and AI-powered platforms.
+                <br/>
+                I graduated from The University of Texas at Austin (B.S. Computer Science and minors in Business and Applied Economics). <br/>
+                Currently a developer for DraawApp Technologies.
+                <br/>
+                I&apos;ve designed systems each built with a strong emphasis on performance, reliability, and real-world constraints.
+                <br/>
+                I’m most interested in solving problems where system design, scalability, and correctness matter. 
+                <br/>
+                Reach out below — I&apos;ll get back to you as soon as I can.</p>
               </div>
             </div>
           </div>
@@ -148,7 +150,7 @@ export default function App() {
                   'Docker/Kubernetes',
                   'Redis',
                 ].map((s) => (
-                  <span key={s} className="skill-pill">
+                  <span key={s} className="btn-liquid">
                     {s}
                   </span>
                 ))}
@@ -185,7 +187,7 @@ export default function App() {
                 <input type="text" name="Name" placeholder="Your name" required autoComplete="name" />
                 <input type="email" name="Email" placeholder="Your email" required autoComplete="email" />
                 <textarea name="Message" rows={6} placeholder="Your message" required />
-                <button type="submit" className="btn-liquid btn-liquid--solid">
+                <button type="submit" className="btn-liquid">
                   Send message
                 </button>
                 <p className="msg-status" role="status">

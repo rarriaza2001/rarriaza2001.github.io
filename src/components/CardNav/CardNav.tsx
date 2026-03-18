@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-// use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
 import './CardNav.css';
 
@@ -39,7 +38,6 @@ const CardNav: React.FC<CardNavProps> = ({
   ease = 'power3.out',
   baseColor = '#fff',
   menuColor,
-  buttonBgColor,
   buttonTextColor,
   ctaHref,
   ctaLabel = 'Resume'
@@ -144,18 +142,31 @@ const CardNav: React.FC<CardNavProps> = ({
 
   const closeMenu = () => {
     const tl = tlRef.current;
-    if (!tl || !isExpanded) return;
+    if (!isExpanded) return;
     setIsHamburgerOpen(false);
+    if (!tl) {
+      if (navRef.current) {
+        gsap.set(navRef.current, { height: 60, overflow: 'hidden' });
+      }
+      setIsExpanded(false);
+      return;
+    }
     tl.eventCallback('onReverseComplete', () => setIsExpanded(false));
     tl.reverse();
   };
 
   const toggleMenu = () => {
     const tl = tlRef.current;
-    if (!tl) return;
     if (!isExpanded) {
       setIsHamburgerOpen(true);
       setIsExpanded(true);
+      if (!tl) {
+        if (navRef.current) {
+          gsap.set(navRef.current, { height: calculateHeight(), overflow: 'hidden' });
+        }
+        gsap.set(cardsRef.current, { y: 0, opacity: 1 });
+        return;
+      }
       tl.play(0);
     } else {
       closeMenu();
@@ -176,17 +187,17 @@ const CardNav: React.FC<CardNavProps> = ({
     <div className={`card-nav-container ${className}`}>
       <nav ref={navRef} className={`card-nav ${isExpanded ? 'open' : ''}`} style={{ backgroundColor: baseColor }}>
         <div className="card-nav-top">
-          <div
+          <button
+            type="button"
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''}`}
             onClick={toggleMenu}
-            role="button"
             aria-label={isExpanded ? 'Close menu' : 'Open menu'}
-            tabIndex={0}
+            aria-expanded={isExpanded}
             style={{ color: menuColor || '#000' }}
           >
             <div className="hamburger-line" />
             <div className="hamburger-line" />
-          </div>
+          </button>
 
           <div className="logo-container">
             <img src={logo} alt={logoAlt} className="logo" />
@@ -196,16 +207,16 @@ const CardNav: React.FC<CardNavProps> = ({
             <a
               href={ctaHref}
               download={ctaHref.endsWith('.pdf')}
-              className="card-nav-cta-button"
-              style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+              className="btn-liquid card-nav-cta-button"
+              style={{ color: buttonTextColor } as React.CSSProperties}
             >
               {ctaLabel}
             </a>
           ) : (
             <button
               type="button"
-              className="card-nav-cta-button"
-              style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
+              className="btn-liquid card-nav-cta-button"
+              style={{ color: buttonTextColor } as React.CSSProperties}
             >
               {ctaLabel}
             </button>
@@ -218,7 +229,13 @@ const CardNav: React.FC<CardNavProps> = ({
               key={`${item.label}-${idx}`}
               className="nav-card"
               ref={setCardRef(idx)}
-              style={{ backgroundColor: item.bgColor, color: item.textColor }}
+              style={
+                {
+                  '--nav-card-bg': item.bgColor,
+                  '--nav-card-fg': item.textColor,
+                  color: item.textColor
+                } as React.CSSProperties
+              }
             >
               <div className="nav-card-label">{item.label}</div>
               <div className="nav-card-links">
