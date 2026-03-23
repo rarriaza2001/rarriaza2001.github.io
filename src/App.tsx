@@ -201,7 +201,7 @@ export default function App() {
 
         <footer className="site-footer">
           <div className="container">
-            <div className="glass-panel">
+            
               <h2>Tools &amp; technologies</h2>
               <LogoLoop
                 logos={logoLoopItems}
@@ -214,7 +214,7 @@ export default function App() {
                 fadeOutColor="rgba(250, 249, 246, 0.97)"
                 ariaLabel="Technology logos"
               />
-            </div>
+            
           </div>
           <p>
             &copy; {new Date().getFullYear()} Jose Ricardo Arriaza
