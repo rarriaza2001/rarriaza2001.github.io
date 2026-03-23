@@ -201,18 +201,20 @@ export default function App() {
 
         <div className="logo-loop-section">
           <div className="container">
-            <h2>Tools &amp; technologies</h2>
-            <LogoLoop
-              logos={logoLoopItems}
-              speed={80}
-              logoHeight={36}
-              gap={48}
-              pauseOnHover
-              scaleOnHover
-              fadeOut
-              fadeOutColor="rgba(250, 249, 246, 0.97)"
-              ariaLabel="Technology logos"
-            />
+            <div className="glass-panel">
+              <h2>Tools &amp; technologies</h2>
+              <LogoLoop
+                logos={logoLoopItems}
+                speed={80}
+                logoHeight={36}
+                gap={48}
+                pauseOnHover
+                scaleOnHover
+                fadeOut
+                fadeOutColor="rgba(250, 249, 246, 0.97)"
+                ariaLabel="Technology logos"
+              />
+            </div>
           </div>
         </div>
 
