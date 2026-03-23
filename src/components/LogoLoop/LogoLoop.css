@@ -26,7 +26,7 @@
 
 .logoloop__track {
   display: flex;
-  width: max-content;
+  width: 100%;
   will-change: transform;
   user-select: none;
   position: relative;
