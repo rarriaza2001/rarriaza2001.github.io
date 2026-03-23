@@ -201,8 +201,6 @@ export default function App() {
 
         <footer className="site-footer">
           <div className="container">
-            
-              <h2>Tools &amp; technologies</h2>
               <LogoLoop
                 logos={logoLoopItems}
                 speed={80}
@@ -213,8 +211,7 @@ export default function App() {
                 fadeOut
                 fadeOutColor="rgba(250, 249, 246, 0.97)"
                 ariaLabel="Technology logos"
-              />
-            
+              />    
           </div>
           <p>
             &copy; {new Date().getFullYear()} Jose Ricardo Arriaza
