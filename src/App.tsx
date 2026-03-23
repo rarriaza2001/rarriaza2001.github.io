@@ -199,7 +199,7 @@ export default function App() {
           </div>
         </section>
 
-        <div className="logo-loop-section">
+        <div className="logo-loop-section glass-panel">
           <div className="container">
             <div className="glass-panel">
               <h2>Tools &amp; technologies</h2>
